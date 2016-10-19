@@ -1,0 +1,27 @@
+.box{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: #eee;
+}
+.con{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 12px;
+}
+.con li{
+  background: #fff;
+  padding-left: 10px;
+  height: 40px;
+  line-height: 40px;
+  width: 100%;
+  box-sizing: border-box;
+  border-bottom: 1px solid #eee;
+}
+.box .con .exit{
+  margin-top: 20px;
+  text-align: center;
+}

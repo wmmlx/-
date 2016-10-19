@@ -1,0 +1,8 @@
+<view class="box">
+    <ul class="con">
+        <li>关于我们</li>
+        <li>清除缓存</li>
+        <li>意见反馈</li>
+        <li class="exit">退出登录</li>
+    </ul>
+</view>

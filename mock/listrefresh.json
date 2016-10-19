@@ -1,0 +1,32 @@
+[
+  {
+    "infoimg":"/images/t5.jpg",
+    "name":"CC",
+    "pro":["/images/m35.jpg"]
+  },
+  {
+    "infoimg":"/images/t6.jpg",
+    "name":"CC",
+    "pro":["/images/m36.jpg"]
+  },
+  {
+    "infoimg":"/images/t7.jpg",
+    "name":"CC",
+    "pro":["/images/m37.jpg"]
+  },
+  {
+    "infoimg":"/images/t8.jpg",
+    "name":"CC",
+    "pro":["/images/m38.jpg"]
+  },
+  {
+    "infoimg":"/images/t9.jpg",
+    "name":"CC",
+    "pro":["/images/m39.jpg"]
+  },
+  {
+    "infoimg":"/images/t10.jpg",
+    "name":"CC",
+    "pro":["/images/m40.jpg"]
+  }
+]

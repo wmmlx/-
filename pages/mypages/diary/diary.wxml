@@ -1,0 +1,64 @@
+<view class="conbox">
+    <view class='navbox'>
+        <ul>
+            <li>
+                <image class="{{navcurrentpage==0? 'navliactive':''}}" catchtap='switchSlider' data-index='0' mode='aspectFit' src='/images/came.png'></image>
+            </li>
+            <li>
+                <image class="{{navcurrentpage==1? 'navliactive':''}}" catchtap='switchSlider' data-index='1' mode='aspectFit' src='/images/sp.png'></image>
+            </li>
+            <li>
+                <image class="{{navcurrentpage==2? 'navliactive':''}}" catchtap='switchSlider' data-index='2' mode='aspectFit' src='/images/audio1.png'></image>
+            </li>
+        </ul>
+    </view>
+    <swiper class="diarybox" bindchange="changeSlider" indicator-dots='{{swiper.indicatorDots}}' autoplay='{{swiper.autoplay}}' interval="{{swiper.interval}}" duration="{{swiper.duration}}" current="{{navcurrentpage}}">
+        <swiper-item>
+            <scroll-view class="scroll" scroll-y="true" bindscrolltoupper="actionToupper" bindscrolltolower="actionTolower" upper-threshold="0" lower-threshold="0">
+                <view class='diaryimg'>
+                    <image src='{{tempFilePaths}}'></image>
+                </view>
+                <view class="talkcon">
+                {{con}}
+                </view>
+                <view class="scbox">
+                    <view bindtap="actionSheetTap" class="shangchuan">
+                        +
+                    </view>
+                </view>
+            </scroll-view>
+        </swiper-item>
+        <swiper-item>
+            <scroll-view class="scroll" scroll-y="true" bindscrolltoupper="actionToupper" bindscrolltolower="actionTolower" upper-threshold="0" lower-threshold="0">
+                <view class='videoBox'>
+                    <video src="{{videosrc}}"></video>
+                </view>
+                <view class="scbox">
+                    <view bindtap="bindButtonTap" class="shangchuan">
+                        +
+                    </view>
+                </view>
+            </scroll-view>
+        </swiper-item>
+        <swiper-item>
+            <scroll-view class="scroll" scroll-y="true" bindscrolltoupper="actionToupper" bindscrolltolower="actionTolower" upper-threshold="0" lower-threshold="0">
+                <view class='audioBox'>
+                  <audio poster="{{poster}}" name="{{name}}" author="{{author}}" src="{{src}}" action="{{action}}" controls loop></audio>
+                </view>
+            </scroll-view>
+        </swiper-item>
+    </swiper>
+</view>
+<action-sheet hidden="{{actionSheetHidden}}" bindchange="actionSheetChange">
+    <block wx:for="{{actionSheetItems}}">
+        <action-sheet-item class="item" bindtap="bindItemTap" data-name="{{item}}">{{item}}</action-sheet-item>
+    </block>
+    <action-sheet-cancel class="cancel">取消</action-sheet-cancel>
+</action-sheet>
+
+<action-sheet hidden="{{videoHidden}}" bindchange="videoChange">
+    <block wx:for="{{videoItems}}">
+        <action-sheet-item class="item" bindtap="videobindItemTap" data-name="{{item}}">{{item}}</action-sheet-item>
+    </block>
+    <action-sheet-cancel class="cancel">取消</action-sheet-cancel>
+</action-sheet>

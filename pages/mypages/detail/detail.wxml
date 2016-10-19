@@ -1,0 +1,30 @@
+<view class="wrapbox">
+    <scroll-view class="scroll" scroll-y="true" bindscrolltoupper="actionToupper" bindscrolltolower="actionTolower" upper-threshold="0" lower-threshold="0">
+        <view class="detailbox">
+            <!-- <view class="imgbox">
+                <image src='{{detai.imgsrc}}'></image>
+            </view> -->
+            <swiper class="imgbox" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+                <block>
+                    <swiper-item>
+                        <image src="{{detai.imgsrc}}" class="slide-image" width="355" height="150" />
+                    </swiper-item>
+                    <swiper-item wx:for="{{imgUrls}}">
+                        <image src="{{item}}" class="slide-image" width="355" height="150" />
+                    </swiper-item>
+                </block>
+            </swiper>
+            <view class="pricebox">
+                <text>{{detai.title}}</text>
+                <text class='oldprice'>￥{{detai.newprice}}</text>
+                <text class="newprice">运费：0.0元</text>
+            </view>
+        </view>
+        <view class="detail">
+            <image src="/images/d7.jpg"></image>
+            <image src="/images/d9.jpg"></image>
+            <image src="/images/d10.jpg"></image>
+        </view>
+    </scroll-view>
+
+</view>

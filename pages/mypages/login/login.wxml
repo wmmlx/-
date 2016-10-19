@@ -1,0 +1,37 @@
+<view class='box'>
+    <view class="title">
+        <view class="imgBox">
+            <image src='/images/logo_title.png'></image>
+        </view>
+    </view>
+    <view class='name'>
+        <view class="nameimg">
+            <image src='/images/login_mobile.png'></image>
+        </view>
+        <input bindblur="inputName" placeholder-style="color:#999" placeholder="用户名" />
+    </view>
+    <view class='name'>
+        <view class="nameimg">
+            <image src='/images/login_pwd.png'></image>
+        </view>
+        <input bindblur="inputPass" placeholder-style="color:#999" password placeholder="密码" />
+    </view>
+    <view class="loginbox">
+        <view catchtap="bindButtonTap" class='login'>登录</view>
+    </view>
+    <view class='forget'>
+        <text>立即注册</text>
+        <text>忘记密码</text>
+    </view>
+    <ul class="loginstyle">
+        <li>
+            <image src='/images/login_wechat.png'></image>
+        </li>
+        <li>
+            <image src='/images/login_qq.png'></image>
+        </li>
+        <li>
+            <image src='/images/login_sina.png'></image>
+        </li>
+    </ul>
+</view>

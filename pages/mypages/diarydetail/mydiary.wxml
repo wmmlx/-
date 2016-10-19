@@ -1,0 +1,17 @@
+<view class='wrap'>
+    <view class='box'>
+        <input bindblur="inputCon" class='con' type="text" placeholder-style="color:#666" placeholder="说点什么吧" />
+        <view class="imgbox">
+            <image bindtap="bindButtonTap" mode='aspectFit' src='{{tempFilePaths}}'></image>
+        </view>
+        <view class="savebox">
+            <text bindtap="actionSheetTap"  class="save">保存</text>
+        </view>
+    </view>
+</view>
+<action-sheet hidden="{{actionSheetHidden}}" bindchange="actionSheetChange">
+    <block wx:for="{{actionSheetItems}}">
+        <action-sheet-item class="item" bindtap="bindItemTap" data-name="{{item}}">{{item}}</action-sheet-item>
+    </block>
+    <action-sheet-cancel class="cancel">取消</action-sheet-cancel>
+</action-sheet>

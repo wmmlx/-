@@ -1,0 +1,47 @@
+{
+    "pages": [
+        "pages/mypages/login/login",
+        "pages/mypages/diarydetail/mydiary",
+        "pages/mypages/main/main",
+        "pages/mypages/shezhi/shezhi",
+        "pages/mypages/search/search",
+        "pages/mypages/detail/detail",
+        "pages/mypages/shop/paintshop",
+        "pages/mypages/diary/diary",
+        "pages/mypages/board/mersage",
+        "pages/index/index",
+        "pages/logs/logs"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#fff",
+        "navigationBarTitleText": "WeChat",
+        "navigationBarTextStyle": "white"
+    },
+    "tabBar": {
+        "color": "#a9b7b7",
+        "selectedColor": "#0dc441",
+        "borderStyle": "white",
+        "list": [{
+            "pagePath": "pages/mypages/search/search",
+            "text": "发现",
+            "iconPath": "/images/tab_discovery_normal.png",
+            "selectedIconPath": "/images/tab_discovery_active.png"
+        }, {
+            "pagePath": "pages/mypages/shop/paintshop",
+            "text": "画铺",
+            "iconPath": "/images/tab_shop_normal.png",
+            "selectedIconPath": "/images/tab_shop_active.png"
+        }, {
+            "pagePath": "pages/mypages/diary/diary",
+            "iconPath": "/images/tab_diary_normal.png",
+            "selectedIconPath": "/images/tab_diary_active.png",
+            "text": "我的日记"
+        }, {
+            "pagePath": "pages/mypages/board/mersage",
+            "iconPath": "/images/tab_board_normal.png",
+            "selectedIconPath": "/images/tab_board_active.png",
+            "text": "我的"
+        }]
+    }
+}

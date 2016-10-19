@@ -1,0 +1,60 @@
+<view class="wrapbox">
+    <view class='userinfo'>
+        <view class='userimg'>
+            <image  src='/images/tt.jpg'></image>
+        </view>
+        <view class='user'>一缕阳光</view>
+    </view>
+    <ul class='box'>
+        <li>
+            <view class='imgbox'>
+                <image mode='aspectFit' src='/images/gr.png'></image>
+            </view>
+            <text>个人中心</text>
+        </li>
+        <li>
+            <view class='imgbox'>
+                <image mode='aspectFit'  src='/images/statis_up.png'></image>
+            </view>
+            <text>粉丝</text>
+        </li>
+        <li>
+            <view class='imgbox'>
+                <image mode='aspectFit'   src='/images/gz.png'></image>
+            </view>
+            <text>关注</text>
+        </li>
+        <li>
+            <view class='imgbox'>
+                <image mode='aspectFit'   src='/images/xx.png'></image>
+            </view>
+            <text>消息</text>
+        </li>
+        <li>
+            <view class='imgbox'>
+                <image mode='aspectFit'  src='/images/qb.png'></image>
+            </view>
+            <text>钱包</text>
+        </li>
+        <li>
+            <view class='imgbox'>
+                <image mode='aspectFit'  src='/images/dd.png'></image>
+            </view>
+            <text>订单</text>
+        </li>
+    </ul>
+    <ul class="design">
+        <li>
+            <view class='designimg'>
+                <image src='/images/sz.png'></image>
+            </view>
+            <navigator url="/pages/mypages/shezhi/shezhi">设置</navigator>
+        </li>
+        <li>
+            <view class='designimg'>
+                <image src='/images/dz.png'></image>
+            </view>
+            <tetx>收获地址</tetx>
+        </li>
+    </ul>
+</view>

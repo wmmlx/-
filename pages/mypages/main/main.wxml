@@ -1,0 +1,8 @@
+<view class="con">
+    <view class='top'>
+        <image mode='aspectFit'  src='/images/splash_top.png'></image>
+    </view>
+    <view class='bottom'>
+        <image src='/images/splash_bottom.png'></image>
+    </view>
+</view>

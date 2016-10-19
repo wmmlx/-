@@ -1,0 +1,22 @@
+[
+  {
+    "infoimg":"/images/t1.jpg",
+    "name":"happy",
+    "pro":["/images/m31.jpg"]
+  },
+  {
+    "infoimg":"/images/t2.jpg",
+      "name":"sunshine",
+      "pro":["/images/m32.jpg"]
+  },
+  {
+      "infoimg":"/images/t3.jpg",
+      "name":"CC",
+      "pro":["/images/m33.jpg"]
+  },
+  {
+    "infoimg":"/images/t4.jpg",
+    "name":"CC",
+    "pro":["/images/m34.jpg"]
+  }
+]

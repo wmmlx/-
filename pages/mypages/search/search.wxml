@@ -1,0 +1,98 @@
+<view class="bodyBox">
+    <nav class="contitle">
+        <ul>
+            <li class="{{navcurrentpage==0? 'navliactive':''}}" catchtap='switchSlider' data-index='0'>作品</li>
+            <li class="{{navcurrentpage==1? 'navliactive':''}}" catchtap='switchSlider' data-index='1'>画报</li>
+        </ul>
+    </nav>
+    <swiper class="conbox" bindchange="changeSlider" indicator-dots='{{swiper.indicatorDots}}' autoplay='{{swiper.autoplay}}' interval="{{swiper.interval}}" duration="{{swiper.duration}}" current="{{navcurrentpage}}">
+        <block>
+            <swiper-item class="zuopingBox">
+                <view class="menubox">
+                    <view class="menu">
+                        <scroll-view scroll-x="true">
+                            <ul>
+                                <li wx:for='{{menuData}}' class="{{menucurrentpage==index? 'menuliactive':''}}" catchtap='switchMenu' data-index='{{index}}'>{{item}}</li>
+                            </ul>
+                        </scroll-view>
+                    </view>
+                    <!-- <view class="pullbutton">
+                      <image mode='aspectFit' src='/images/main_filter_down.png'></image>
+                  </view> -->
+                </view>
+                <view class="pullmenubox">
+                    <view class="pullmenutitle">
+                        <text>选择作品分类</text>
+                        <!-- <view colass="pullup">
+                          <image mode='aspectFit' src='/images/main_filter_up.png'></image>
+                      </view> -->
+                    </view>
+                    <ul class="pulllmenu">
+                        <li wx:for='{{menuData}}' catchtap='pullMenu' data-index='{{index}}'>{{item}}</li>
+                    </ul>
+                </view>
+                <view class="list-loading">
+                    <loading hidden="{{loadingHidden}}">努力加载中...</loading>
+                </view>
+                <scroll-view class="scroll" wx:if="{{loadingHidden}}" scroll-y="true" bindscrolltoupper="actionToupper" bindscrolltolower="actionTolower" upper-threshold="0" lower-threshold="0">
+                    <view class="condetail">
+                        <view hidden="{{refreshHidden}}">
+                            <button class='refresh' style='border:0' plain="true" loading="true">努力刷新中...</button>
+                        </view>
+                        <ul>
+                            <li wx:for='{{list}}'>
+                                <view class="detailtitle">
+                                    <view class="userinfo">
+                                        <view class="imagebox">
+                                            <image mode='aspectFit' src='{{item.infoimg}}'></image>
+                                        </view>
+                                        <text>{{item.name}}</text>
+                                    </view>
+                                    <b>+关注</b>
+                                </view>
+                                <view class="imgshow">
+                                    <image src='{{item.pro}}'></image>
+                                </view>
+                                <view class="sharebox">
+                                    <view class="shareleft">
+                                        <image mode='aspectFit' src='/images/up_num.png'></image>
+                                        <image mode='aspectFit' src='/images/tab_board_normal.png'></image>
+                                        <image mode='aspectFit' src='/images/share.png'></image>
+                                    </view>
+                                    <view class="shareright">
+                                        <image mode='aspectFit' src='/images/more.png'></image>
+                                    </view>
+                                </view>
+                            </li>
+                        </ul>
+                        <view style="padding-bottom:40px;" hidden="{{loadmoreHidden}}">
+                            <button class='refresh' plain="true" loading="true">努力加载中...</button>
+                        </view>
+                    </view>
+                </scroll-view>
+            </swiper-item>
+            <swiper-item class="huabaobox">
+                <scroll-view scroll-top="4" class="huabaoscroll" wx:if="{{HuaHidden}}" scroll-y="true" bindscrolltoupper="huaToupper" bindscrolltolower="huaTolower" upper-threshold="0" lower-threshold="0">
+                  <view hidden="{{refreshHiddenHua}}">
+                      <button class='refresh' style='border:0' plain="true" loading="true">努力刷新中...</button>
+                  </view>
+                    <ul class="huacon">
+                        <li wx:for="{{listHua}}">
+                            <view class="imgLeft">
+                                <text class="imgtitle">{{item.title}}</text>
+                                <view class="imgdate">{{item.type}}<text>{{item.date}}</text></view>
+                                <text class="imgtopic">{{item.topic}}</text>
+                            </view>
+                            <view class="imgRight">
+                                <image  src='{{item.imgsrc}}'></image>
+                            </view>
+                        </li>
+                    </ul>
+                    <view style="padding-bottom:40px;" hidden="{{loadmoreHiddenHua}}">
+                        <button style="border:0" class='refresh' plain="true" loading="true">努力加载中...</button>
+                    </view>
+                </scroll-view>
+            </swiper-item>
+        </block>
+    </swiper>
+</view>
